@@ -1,0 +1,43 @@
+@import "./themes/dark";
+
+body
+{
+    width: 100%;
+    height: 100%;
+    color: var(--default-color);
+}
+
+.wow-background
+{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top;
+    background-size: cover;
+    background-image: var(--main-background);
+}
+
+.flex-push-right
+{
+    margin-left: auto;
+}
+
+/* Utility class to have a link not look like a link and instead inherit from parent */
+.inherit-link
+{
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.inherit-link:hover
+{
+    color: inherit;
+    text-decoration: inherit;
+}
+
+pre
+{
+    color: var(--default-color);
+}
+
+@import "./layout/layout";
+@import "./menu/menu";

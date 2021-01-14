@@ -1,0 +1,32 @@
+<div class="top-navigation-row">
+
+    <div class="top-navigation-container">
+
+        <!-- Guild Logo -->
+        <div class="guild-logo-container">
+            <a href="">
+                <img class="guild-logo-image" src="{{ asset('/build/images/desktop/navigation/GuildLogo.png') }}" alt="Guild Logo"/>
+            </a>
+        </div>
+
+        <!-- Guild Name -->
+        <div class="guild-name-container">
+            <a href="" class="inherit-link">La Danse Macabre</a>
+        </div>
+
+        <!-- Horizontal Menu -->
+        <div class="horizontal-menu-container flex-push-right">
+
+            {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+                <a href="{{ path('app_logout') }}">logout</a>
+            {% else %}
+                <a href="{{ path('app_login') }}">login</a>
+            {% endif %}
+
+        </div>
+
+    </div>
+
+</div>
+
+

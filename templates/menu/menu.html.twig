@@ -1,0 +1,57 @@
+{% extends 'layout/wide-page.html.twig' %}
+
+{% block title %}
+
+    Menu - Welcome to La Danse Macabre
+
+{% endblock %}
+
+{% block page_content %}
+
+    <div class="page-container">
+
+        <div class="menu-container">
+
+            <div class="menu-columns-container">
+
+                <div class="menu-column">
+
+                    <ul class="tile-list">
+
+                        {% include 'menu/icon-tile.html.twig' with {
+                            'pagePath': 'secured',
+                            'tileSize': 'wide',
+                            'icon': 'fa-headphones',
+                            'iconState': 'fas',
+                            'label': 'Chat & Voice'
+                        } only %}
+
+                        {% include 'menu/icon-tile.html.twig' with {
+                            'urlPath': 'https://www.facebook.com/groups/23877201619/media/albums',
+                            'tileSize': 'single',
+                            'icon': 'fa-image',
+                            'iconState': 'far',
+                            'label': 'Pictures'
+                        } only %}
+
+                        {% include 'menu/icon-tile.html.twig' with {
+                            'pagePath': 'secured',
+                            'tileSize': 'single',
+                            'icon': 'fa-headphones',
+                            'iconState': 'fas',
+                            'label': 'Chat & Voice'
+                        } only %}
+
+
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+{% endblock %}

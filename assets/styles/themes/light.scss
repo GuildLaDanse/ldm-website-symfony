@@ -1,0 +1,18 @@
+:root
+{
+  --main-background:
+    /* top, transparent */
+    linear-gradient(
+        rgba(255, 255, 255, 0.85),
+        rgba(255, 255, 255, 0.85)
+    ),
+      /* actual background image beneath */
+    url('/assets/images/wallpapers/background.jpg');
+
+  --default-color: black;
+
+  --nav-background: rgb(0, 0, 0);
+  --default-background: rgb(255, 255, 255);
+  --content-background: rgb(255, 255, 255);
+  --focus-background: rgb(235, 235, 235);
+}

@@ -1,0 +1,22 @@
+{% extends 'layout/base.html.twig' %}
+
+{% block body %}
+
+    {% include 'layout/header.html.twig' %}
+
+    {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+        {% include 'layout/side-menu.html.twig' %}
+    {% endif %}
+
+    <div>
+
+        {% block page_content %}{% endblock %}
+
+    </div>
+
+    {% include 'layout/footer.html.twig' %}
+
+{% endblock %}
+
+
+

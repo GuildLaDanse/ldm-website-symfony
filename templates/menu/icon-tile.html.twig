@@ -1,0 +1,25 @@
+{% if pagePath is defined %}
+    <a href="{{ path(pagePath) }}">
+{% elseif urlPath is defined %}
+    <a href="{{ urlPath }}" target="_blank">
+{% endif %}
+
+    <div class="tile tile-{{ tileSize }}">
+
+        <div class="tile-content">
+            <div class="icon-container">
+                <i class="{{ iconState }} {{ icon }} fa-5x"></i>
+            </div>
+        </div>
+
+        <div class="tile-label tile-text-label">
+
+            <span>{{ label }}</span>
+
+        </div>
+
+    </div>
+
+{% if pagePath is defined or urlPath is defined %}
+    </a>
+{% endif %}

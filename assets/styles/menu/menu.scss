@@ -1,0 +1,108 @@
+div.page-container {
+  width: 100%;
+  margin: 50px auto auto;
+  position: relative;
+}
+
+div.menu-container {
+  width: max-content;
+  margin: auto;
+}
+
+div.menu-columns-container {
+  white-space: nowrap;
+  position: relative;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+div.menu-news-column {
+  width: 450px;
+}
+
+div.news-column-wrapper {
+  padding: 5px;
+  margin: 10px;
+}
+
+div.menu-column {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.tile-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  width: 342px;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.tile {
+  margin: 10px;
+  ttext-align: center;
+  background-color: var(--menu-tile-background);
+  color: rgb(250, 250, 250);
+  position: relative;
+}
+
+.tile:hover {
+  background-color: var(--menu-tile-background-hover);
+}
+
+.tile-single {
+  width: 150px;
+  height: 150px;
+}
+
+.tile-wide {
+  width: 320px;
+  height: 150px;
+}
+
+.tile-content {
+  padding: 5px 5px 35px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.tile-label {
+  position: absolute;
+}
+
+.tile-text-label {
+  left: 8px;
+  bottom: 5px;
+  font-size: 0.9em;
+  font-weight: 300;
+}
+
+.tile-icon-label {
+  font-size: 0.75em;
+  left: 8px;
+  bottom: 8px;
+}
+
+div.icon-container
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,21 @@
+:root
+{
+  --main-background:
+    /* top, transparent */
+    linear-gradient(
+        rgba(26, 26, 26, 0.85),
+        rgba(26, 26, 26, 0.85)
+    ),
+      /* actual background image beneath */
+    url('../../images/wallpapers/background.jpg');
+
+  --default-color: rgb(240, 240, 240);
+
+  --nav-background: rgba(18, 18, 20, 0.8);
+  --default-background: rgb(18, 18, 20);
+  --content-background: rgb(21, 21, 24);
+  --focus-background: rgb(35, 35, 35);
+
+  --menu-tile-background: rgba(75, 75, 75, .60);
+  --menu-tile-background-hover: rgba(75, 75, 75, .85);
+}
