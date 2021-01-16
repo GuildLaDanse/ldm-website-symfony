@@ -1,0 +1,13 @@
+<div class="menu-news">
+
+    {% for newsItem in wowheadNews|slice(0, 8) %}
+    <p class="news-item">
+        <a  href="{{ newsItem.link }}" target="_blank">
+            {{ newsItem.title }}
+        </a>
+        <br>
+        <span class="news-timestamp">{{ newsItem.pubDate }}</span>
+    </p>
+    {% endfor %}
+
+</div>

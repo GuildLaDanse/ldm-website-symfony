@@ -18,33 +18,201 @@
 
                     <ul class="tile-list">
 
-                        {% include 'menu/icon-tile.html.twig' with {
-                            'pagePath': 'secured',
+                        {% include 'menu/menu-tile.html.twig' with {
+                            'route': 'secured',
                             'tileSize': 'wide',
-                            'icon': 'fa-headphones',
-                            'iconState': 'fas',
-                            'label': 'Chat & Voice'
+                            'content': {
+                                'controller': 'App\\Interfaces\\Web\\Controller\\Menu\\MenuController::eventTile'
+                            },
+                            'footer': {
+                                'icon': 'fa-calendar-alt',
+                                'iconState': 'far'
+                            }
                         } only %}
 
-                        {% include 'menu/icon-tile.html.twig' with {
+                        {% include 'menu/menu-tile.html.twig' with {
                             'urlPath': 'https://www.facebook.com/groups/23877201619/media/albums',
                             'tileSize': 'single',
-                            'icon': 'fa-image',
-                            'iconState': 'far',
-                            'label': 'Pictures'
+                            'content': {
+                                'icon': 'fa-image',
+                                'iconState': 'far'
+                            },
+                            'footer': {
+                                'label': 'Pictures'
+                            }
                         } only %}
 
-                        {% include 'menu/icon-tile.html.twig' with {
-                            'pagePath': 'secured',
+                        {% include 'menu/menu-tile.html.twig' with {
+                            'route': 'secured',
                             'tileSize': 'single',
-                            'icon': 'fa-headphones',
-                            'iconState': 'fas',
-                            'label': 'Chat & Voice'
+                            'content': {
+                                'icon': 'fa-headphones',
+                                'iconState': 'fas'
+                            },
+                            'footer': {
+                                'label': 'Chat & Voice'
+                            }
                         } only %}
 
+                        {% include 'menu/menu-tile.html.twig' with {
+                            'route': 'secured',
+                            'tileSize': 'wide',
+                            'underConstruction': true,
+                            'content': {
+                                'controller': 'App\\Interfaces\\Web\\Controller\\Menu\\MenuController::forumTile'
+                            },
+                            'footer': {
+                                'icon': 'fa-comments',
+                                'iconState': 'fas'
+                            }
+                        } only %}
 
+                        {% include 'menu/menu-tile.html.twig' with {
+                            'urlPath': 'https://www.facebook.com/groups/23877201619/',
+                            'tileSize': 'single',
+                            'content': {
+                                'image': '/build/images/menu/logos/FB-f-Logo__blue_100.png'
+                            },
+                            'footer': {
+                                'label': 'Facebook Page'
+                            }
+                        } only %}
+
+                        {% include 'menu/menu-tile.html.twig' with {
+                            'route': 'secured',
+                            'tileSize': 'single',
+                            'content': {
+                                'icon': 'fa-info',
+                                'iconState': 'fas'
+                            },
+                            'footer': {
+                                'label': 'About'
+                            }
+                        } only %}
 
                     </ul>
+
+                </div>
+
+                <div class="menu-column">
+
+                    <ul class="tile-list">
+
+                        {% include 'menu/menu-tile.html.twig' with {
+                            'route': 'secured',
+                            'tileSize': 'single',
+                            'underConstruction': true,
+                            'content': {
+                                'icon': 'fa-users',
+                                'iconState': 'fas'
+                            },
+                            'footer': {
+                                'label': 'My WoW Characters'
+                            }
+                        } only %}
+
+                        {% include 'menu/menu-tile.html.twig' with {
+                            'route': 'secured',
+                            'tileSize': 'single',
+                            'underConstruction': true,
+                            'content': {
+                                'icon': 'fa-th',
+                                'iconState': 'fas'
+                            },
+                            'footer': {
+                                'label': 'Who is Who'
+                            }
+                        } only %}
+
+                        {% include 'menu/menu-tile.html.twig' with {
+                            'urlPath': 'https://www.icy-veins.com/wow/',
+                            'tileSize': 'single',
+                            'content': {
+                                'image': '/build/images/menu/logos/logo_icyveins.png'
+                            },
+                            'footer': {
+                                'label': 'Icy Veins'
+                            }
+                        } only %}
+
+                        {% include 'menu/menu-tile.html.twig' with {
+                            'urlPath': 'https://www.wowhead.com/',
+                            'tileSize': 'single',
+                            'content': {
+                                'image': '/build/images/menu/logos/logo_wowhead.png'
+                            },
+                            'footer': {
+                                'label': 'Wowhead'
+                            }
+                        } only %}
+
+                        {% include 'menu/menu-tile.html.twig' with {
+                            'urlPath': 'https://www.askmrrobot.com/',
+                            'tileSize': 'single',
+                            'content': {
+                                'image': '/build/images/menu/logos/AMRLogoHomePage.png'
+                            },
+                            'footer': {
+                                'label': 'Ask Mr Robot'
+                            }
+                        } only %}
+
+                        {% include 'menu/menu-tile.html.twig' with {
+                            'urlPath': 'https://wow.gamepedia.com/Wowpedia',
+                            'tileSize': 'single',
+                            'content': {
+                                'image': '/build/images/menu/logos/wowpedia.png'
+                            },
+                            'footer': {
+                                'label': 'Wowpedia'
+                            }
+                        } only %}
+
+                        {% include 'menu/menu-tile.html.twig' with {
+                            'urlPath': 'https://www.warcraftlogs.com/guild/eu/defias-brotherhood/la%20danse%20macabre',
+                            'tileSize': 'single',
+                            'content': {
+                                'icon': 'fa-heartbeat',
+                                'iconState': 'fas'
+                            },
+                            'footer': {
+                                'label': 'Warcraft Logs'
+                            }
+                        } only %}
+
+                        {% include 'menu/menu-tile.html.twig' with {
+                            'urlPath': 'https://worldofwarcraft.com/en-gb/',
+                            'tileSize': 'single',
+                            'content': {
+                                'image': '/build/images/menu/logos/BattleNet.png'
+                            },
+                            'footer': {
+                                'label': 'WoW Battle.net'
+                            }
+                        } only %}
+
+                        {% include 'menu/menu-tile.html.twig' with {
+                            'urlPath': 'https://worldofwarcraft.com/en-gb/guild/eu/defias-brotherhood/la-danse-macabre',
+                            'tileSize': 'single',
+                            'content': {
+                                'image': '/build/images/menu/logos/BattleNetAndGuildLogo.png'
+                            },
+                            'footer': {
+                                'label': 'Guild @ Battle.net'
+                            }
+                        } only %}
+
+                    </ul>
+
+                </div>
+
+                <div class="menu-news-column">
+
+                    <div class="news-column-wrapper">
+
+                        {{ render(controller('App\\Interfaces\\Web\\Controller\\Menu\\MenuController::wowhead')) }}
+
+                    </div>
 
                 </div>
 

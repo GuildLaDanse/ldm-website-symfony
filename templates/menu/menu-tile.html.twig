@@ -1,10 +1,16 @@
-{% if pagePath is defined %}
+{% if route is defined %}
     <a href="{{ path(route) }}">
 {% elseif urlPath is defined %}
     <a href="{{ urlPath }}" target="_blank">
 {% endif %}
 
     <div class="tile tile-{{ tileSize }}">
+
+        {% if underConstruction is defined and underConstruction %}
+        <div class="construction-overlay tile-{{ tileSize }}">
+            <img src="/build/images/shared/under-construction.gif" alt="under construction"/>
+        </div>
+        {% endif %}
 
         <div class="tile-content">
 
