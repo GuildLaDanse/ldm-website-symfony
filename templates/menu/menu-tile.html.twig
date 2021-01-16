@@ -1,0 +1,51 @@
+{% if pagePath is defined %}
+    <a href="{{ path(route) }}">
+{% elseif urlPath is defined %}
+    <a href="{{ urlPath }}" target="_blank">
+{% endif %}
+
+    <div class="tile tile-{{ tileSize }}">
+
+        <div class="tile-content">
+
+            {% if content is defined and content.icon is defined %}
+            <div class="tile-content">
+                <div class="icon-container">
+                    <i class="{{ content.iconState }} {{ content.icon }} fa-5x"></i>
+                </div>
+            </div>
+            {% endif %}
+
+            {% if content is defined and content.image is defined %}
+            <div class="image-container">
+                <img class="tile-image" src="{{ content.image }}" alt="tile image"/>
+            </div>
+            {% endif %}
+
+            {% if content is defined and content.controller is defined %}
+            {{ render(controller(content.controller)) }}
+            {% endif %}
+
+        </div>
+
+        {% if footer is defined and footer.label is defined %}
+        <div class="tile-label tile-text-label">
+
+            <span>{{ footer.label }}</span>
+
+        </div>
+        {% endif %}
+
+        {% if footer is defined and footer.icon is defined and footer.iconState is defined %}
+        <div class="tile-label tile-icon-label">
+
+            <i class="{{ footer.iconState }} {{ footer.icon }} fa-2x"></i>
+
+        </div>
+        {% endif %}
+
+    </div>
+
+{% if route is defined or urlPath is defined %}
+    </a>
+{% endif %}
