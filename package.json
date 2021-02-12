@@ -4,8 +4,9 @@
         "@symfony/webpack-encore": "^1.0.0",
         "core-js": "^3.0.0",
         "file-loader": "^6.0.0",
-        "node-sass": "^4.0.0",
         "regenerator-runtime": "^0.13.2",
+        "sass": "^1.32.6",
+        "sass-loader": "^10.0.0",
         "stimulus": "^2.0.0",
         "webpack-notifier": "^1.6.0"
     },
@@ -16,8 +17,5 @@
         "dev": "encore dev",
         "watch": "encore dev --watch",
         "build": "encore production --progress"
-    },
-    "dependencies": {
-        "sass-loader": "^9.0.1"
     }
 }
