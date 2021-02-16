@@ -18,9 +18,28 @@
         <div class="horizontal-menu-container flex-push-right">
 
             {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
-                <a href="{{ path('app_logout') }}">logout</a>
+                <div class="menu-item">
+                    Welcome {{ app.user.displayName }}
+                </div>
+                <div class="menu-item">
+                    <a href="{{ path('app_logout') }}"
+                       data-tippy-content="Settings"><i class="fas fa-cog"></i></a>
+                </div>
+                <div class="menu-item">
+                    <a href="{{ path('app_logout') }}"
+                       data-tippy-content="Logout"><i class="fas fa-sign-out-alt"></i></a>
+                </div>
+                <div class="menu-item">
+                    <a href="{{ path('secured') }}"
+                       data-tippy-content="Feedback"><i class="fas fa-envelope"></i></a>
+                </div>
             {% else %}
-                <a href="{{ path('app_login') }}">login</a>
+                <div class="menu-item">
+                    <i>If it's not fun then don't do it!</i>
+                </div>
+                <div class="menu-item">
+                    <a href="{{ path('app_login') }}">Login</a>
+                </div>
             {% endif %}
 
         </div>

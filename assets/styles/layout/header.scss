@@ -31,3 +31,76 @@ div.guild-name-container {
 
 div.horizontal-menu-container {
 }
+
+div.menu-item {
+  color: var(--default-color);
+  font-size: 0.9em;
+  height: 100%;
+  display: inline-block;
+  margin-left: 6px;
+}
+
+div.menu-item:first-child {
+  margin-left: 0;
+}
+
+div.my-account-container {
+  position: relative;
+}
+
+.dropdown-menu
+{
+  background-color: var(--content-background);
+}
+
+a,
+a:hover,
+a:focus
+{
+  color: var(--default-color) !important;
+}
+
+/* Dropdown menu font color*/
+
+.dropdown-menu a,
+.dropdown-menu a:hover,
+.dropdown-menu a:focus
+{
+  color: var(--default-color) !important;
+}
+
+.dropdown-menu a:hover
+{
+  background-color: var(--focus-background);
+  color: var(--default-color) !important;
+}
+
+span.menu-link {
+  color: var(--default-color);
+  font-size: 1.0em;
+  margin-left: 25px;
+  cursor: pointer;
+}
+
+.menu-clickable {
+  cursor: pointer;
+}
+
+span.menu-link:first-child {
+  margin-left: 0;
+}
+
+.menu-toggle-icon {
+  color: lightgray;
+}
+
+.item-icon {
+  width: 25px;
+  display: inline-block;
+  font-size: 0.85em;
+}
+
+.item-label {
+  display: inline-block;
+  font-size: 0.85em;
+}
